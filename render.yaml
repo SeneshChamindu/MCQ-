@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: senesh-mcq-bot
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python main.py
+    healthCheckPath: /
+    envVars:
+      - key: TELEGRAM_BOT_TOKEN
+        sync: false
